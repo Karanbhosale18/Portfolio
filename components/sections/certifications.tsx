@@ -5,44 +5,50 @@ import { Award } from "lucide-react";
 export function Certifications() {
     const certificates = CERTIFICATIONS;
 
-  return (
-    <section className="py-28">
-      <div className="section-shell">
-        <SectionHeading eyebrow="08 · Certifications" title="Certifications & simulations" />
-      </div>
-        <div className="overflow-x-auto hide-scrollbar pb-4">
-            <div className="flex gap-5 w-max snap-x snap-mandatory">
-                {certificates.map((cert) => (
-                    <div
-                        key={cert.name}
-                        className="glass-card flex w-72 shrink-0 snap-start items-start gap-4 p-5 shadow-card"
-                    >
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20 text-primary-400">
-          <Award className="h-5 w-5" />
-        </span>
-                        <div className="flex flex-col">
-                            <p className="text-sm font-medium text-white">
-                                {cert.name}
-                            </p>
+    return (
+        <section className="py-28">
+            <div className="section-shell">
+                <SectionHeading
+                    eyebrow="08 · Certifications"
+                    title="Certifications & simulations"
+                />
 
-                            <p className="mt-1 font-mono text-xs text-zinc-500">
-                                {cert.issuer}
-                            </p>
-
-                            <a
-                                href={cert.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-4 inline-flex w-fit items-center rounded-md border border-primary px-3 py-2 text-sm font-medium text-primary transition-all duration-200 hover:bg-primary hover:text-white"
+                <div className="mt-12 pt-4 overflow-x-auto hide-scrollbar">
+                    <div className="flex w-max gap-6 snap-x snap-mandatory pb-4">
+                        {certificates.map((cert) => (
+                            <div
+                                key={cert.name}
+                                className="glass-card w-[340px] flex-shrink-0 snap-start p-6 shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                             >
-                                View Certificate →
-                            </a>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+                                <div className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 text-primary-400">
+                    <Award className="h-6 w-6" />
+                  </span>
 
-    </section>
-  );
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-white">
+                                            {cert.name}
+                                        </h3>
+
+                                        <p className="mt-1 text-sm text-zinc-400">
+                                            {cert.issuer}
+                                        </p>
+
+                                        <a
+                                            href={cert.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="mt-5 inline-flex rounded-lg border border-primary px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-white"
+                                        >
+                                            View Certificate →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }

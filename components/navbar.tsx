@@ -6,6 +6,7 @@ import { Download, Menu, X, Terminal } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,11 +28,16 @@ export function Navbar() {
     >
       <nav className="section-shell flex h-16 items-center justify-between">
         <a href="#top" className="flex items-center gap-2 font-display text-sm font-semibold text-white">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-            <Terminal className="h-4 w-4 text-white" />
-          </span>
+          <Image
+              src="/icon-192.png"
+              alt="Karan Bhosale Logo"
+              width={42}
+              height={42}
+              className="rounded-lg"
+              priority
+          />
           <span>
-            Karan<span className="text-primary-400">.</span>dev
+            Karan Bhosale
           </span>
         </a>
 
