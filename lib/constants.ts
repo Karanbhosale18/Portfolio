@@ -15,11 +15,11 @@ export const SITE = {
   resumePath: "/resume.pdf",
 };
 export const LEETCODE_STATS = {
-  totalSolved: 41,
-  easySolved: 28,
+  totalSolved: 42,
+  easySolved: 29,
   mediumSolved: 9,
   hardSolved: 4,
-  ranking: 3234407,
+  ranking: 2960127,
 };
 
 export const ROLES = [
