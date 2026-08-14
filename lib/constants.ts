@@ -15,9 +15,9 @@ export const SITE = {
   resumePath: "/resume.pdf",
 };
 export const LEETCODE_STATS = {
-  totalSolved: 42,
-  easySolved: 29,
-  mediumSolved: 9,
+  totalSolved: 57,
+  easySolved: 41,
+  mediumSolved: 12,
   hardSolved: 4,
   ranking: 2960127,
 };
