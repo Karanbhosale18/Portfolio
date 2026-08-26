@@ -182,11 +182,79 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    slug: "flowzenix-intelligent-business-process-automation-platform",
+    name: "Flowzenix — Intelligent Business Process Automation Platform",
+    tagline:
+        "An intelligent business process automation platform for designing, executing, and monitoring workflow-driven business operations.",
+    hero: true,
+    stack: [
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "PostgreSQL",
+      "Spring Data JPA",
+      "REST API",
+    ],
+    features: [
+      "Role-based authentication and authorization for platform users",
+      "Visual business process and workflow management",
+      "Automated execution of multi-step business processes",
+      "Task assignment and status tracking across workflows",
+      "Centralized process monitoring and execution history",
+      "REST APIs for integrating workflows with external systems",
+      "Admin controls for managing users, processes, and workflow activity",
+    ],
+    challenges: [
+      "Designing a flexible workflow architecture capable of supporting different business processes",
+      "Maintaining reliable state transitions across multi-step workflow executions",
+      "Implementing secure role-based access while keeping process permissions manageable",
+    ],
+    architecture:
+        "Client → REST API (Spring Boot Controller) → Service Layer (workflow orchestration, validation, business rules) → Repository Layer (Spring Data JPA) → PostgreSQL. Spring Security validates JWT tokens before requests reach protected endpoints; workflow services coordinate process execution, task transitions, and execution tracking.",
+    github:
+        "https://github.com/Karanbhosale18/Flowzenix-Intelligent-Business-Process-Automation-Platform",
+  }
+  ,{
+    slug: "log-sentinel",
+    name: "LogSentinel",
+    tagline:
+        "A full-stack intelligent log analyzer that detects anomalies using statistical signals and uses AI to explain threats in plain English.",
+    hero: true,
+    stack: [
+      "Java 17",
+      "Spring Boot",
+      "Spring Data JPA",
+      "PostgreSQL",
+      "React",
+      "Vite",
+      "OpenAI API",
+      "Docker",
+      "JUnit 5",
+    ],
+    features: [
+      "CSV log ingestion with validation and PostgreSQL persistence",
+      "Statistical anomaly detection that scores every log entry from 0.0 to 1.0",
+      "Weighted-signal detection engine that identifies unusual log patterns",
+      "Persistent anomaly scores, reasons, and detailed signal breakdowns",
+      "AI-powered explanations with root cause and recommended next steps",
+      "Offline deterministic explainer when no AI API key is configured",
+      "React dashboard with filtering, pagination, anomaly highlighting, and detailed log analysis",
+      "REST API for log ingestion, analysis, and anomaly monitoring",
+    ],
+    challenges: [
+      "Designing a deterministic anomaly-detection algorithm that can learn normal behavior from the dataset without relying on an LLM",
+      "Keeping AI responsible only for explaining already-detected anomalies rather than allowing it to determine what is anomalous",
+      "Building a reliable fallback mode so the application remains fully functional when the AI service is unavailable",
+    ],
+    architecture:
+        "Client → React + Vite Frontend → REST/JSON API → Spring Boot Backend → Log Ingestion & Validation → AnomalyDetector → AI Explanation Service → PostgreSQL. The deterministic AnomalyDetector calculates anomaly scores and flags suspicious entries before the optional AI layer generates explanations, root causes, and recommended next steps. The AI layer supports both live OpenAI analysis and a deterministic offline fallback.",
+    github: "https://github.com/Karanbhosale18/LogSentinel",
+  }
+  ,{
     slug: "bank-management-system",
     name: "Bank Management System",
     tagline:
       "A secure, role-based banking backend with JWT authentication, transaction handling, and an admin dashboard.",
-    hero: true,
     stack: ["Spring Boot", "Spring Security", "JWT", "PostgreSQL", "Spring Data JPA", "REST API"],
     features: [
       "Role-based authentication for customers, tellers, and admins",
@@ -205,8 +273,31 @@ export const PROJECTS: Project[] = [
     architecture:
       "Client → API Gateway (Spring Boot Controller) → Service Layer (business rules, validation) → Repository Layer (Spring Data JPA) → PostgreSQL. Security filter chain validates JWT on every request before it reaches the controller; a scheduled job reconciles ledgers nightly.",
     github: "https://github.com/Karanbhosale18/Bank-Management-System",
-  },
-  {
+  }
+  ,{
+    slug: "milind-pawar-website",
+    name: "Milind Pawar Website",
+    hero: true,
+    tagline:
+        "A modern, responsive business website developed as a freelance project, built for performance, clarity, and conversion.",
+    stack: ["React", "Tailwind CSS", "SEO"],
+    features: [
+      "Fully responsive layout across mobile, tablet, and desktop",
+      "Clean, distraction-free UI focused on business conversion",
+      "Optimized asset loading for fast page speed",
+      "On-page SEO — meta tags, semantic structure, and sitemap",
+      "Client-focused structure designed for easy content updates",
+    ],
+    challenges: [
+      "Balancing a content-heavy business site with fast load times",
+      "Designing a UI that remained simple and accessible for a non-technical client",
+      "Translating client requirements into a polished, professional web presence",
+    ],
+    architecture:
+        "Static React front end with component-based sections, optimized assets, and SEO-friendly structure, deployed behind a CDN for fast global delivery.",
+    github: "https://github.com/Karanbhosale18/milind-pawar-website",
+  }
+  ,{
     slug: "student-progress-tracker",
     name: "Student Progress Tracker",
     tagline:
@@ -226,27 +317,8 @@ export const PROJECTS: Project[] = [
     architecture:
       "Android client (Java, XML UI) ↔ Firebase Authentication ↔ Firebase Realtime Database, with a repository layer abstracting reads/writes so the UI never talks to Firebase directly.",
     github: "https://github.com/Karanbhosale18/StudentsProgressTrackerApp",
-  },
-  {
-    slug: "milind-pawar-website",
-    name: "Milind Pawar Website",
-    tagline: "A modern, responsive business website built for performance and clarity.",
-    stack: ["React", "Tailwind CSS", "SEO"],
-    features: [
-      "Fully responsive layout across mobile, tablet, and desktop",
-      "Clean, distraction-free UI focused on conversion",
-      "Optimized asset loading for fast page speed",
-      "On-page SEO — meta tags, semantic structure, sitemap",
-    ],
-    challenges: [
-      "Balancing a content-heavy business site with fast load times",
-      "Designing a UI accessible to a non-technical client to update",
-    ],
-    architecture:
-      "Static React front end with component-based sections, deployed behind a CDN for fast global delivery.",
-    github: "https://github.com/Karanbhosale18/milind-pawar-website",
-  },
-  {
+  }
+  ,{
     slug: "Event-Planner-App",
     name: "Event Planner Application",
     tagline: "A feature-rich Android application that simplifies event planning, attendee management, and real-time event coordination.",
