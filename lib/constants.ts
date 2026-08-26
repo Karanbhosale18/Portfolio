@@ -249,6 +249,28 @@ export const PROJECTS: Project[] = [
     architecture:
         "Client → React + Vite Frontend → REST/JSON API → Spring Boot Backend → Log Ingestion & Validation → AnomalyDetector → AI Explanation Service → PostgreSQL. The deterministic AnomalyDetector calculates anomaly scores and flags suspicious entries before the optional AI layer generates explanations, root causes, and recommended next steps. The AI layer supports both live OpenAI analysis and a deterministic offline fallback.",
     github: "https://github.com/Karanbhosale18/LogSentinel",
+  },{
+    slug: "milind-pawar-website",
+    name: "Milind Pawar Website",
+    hero: true,
+    tagline:
+        "A modern, responsive business website developed as a freelance project, built for performance, clarity, and conversion.",
+    stack: ["React", "Tailwind CSS", "SEO"],
+    features: [
+      "Fully responsive layout across mobile, tablet, and desktop",
+      "Clean, distraction-free UI focused on business conversion",
+      "Optimized asset loading for fast page speed",
+      "On-page SEO — meta tags, semantic structure, and sitemap",
+      "Client-focused structure designed for easy content updates",
+    ],
+    challenges: [
+      "Balancing a content-heavy business site with fast load times",
+      "Designing a UI that remained simple and accessible for a non-technical client",
+      "Translating client requirements into a polished, professional web presence",
+    ],
+    architecture:
+        "Static React front end with component-based sections, optimized assets, and SEO-friendly structure, deployed behind a CDN for fast global delivery.",
+    github: "https://github.com/Karanbhosale18/milind-pawar-website",
   }
   ,{
     slug: "bank-management-system",
@@ -273,29 +295,6 @@ export const PROJECTS: Project[] = [
     architecture:
       "Client → API Gateway (Spring Boot Controller) → Service Layer (business rules, validation) → Repository Layer (Spring Data JPA) → PostgreSQL. Security filter chain validates JWT on every request before it reaches the controller; a scheduled job reconciles ledgers nightly.",
     github: "https://github.com/Karanbhosale18/Bank-Management-System",
-  }
-  ,{
-    slug: "milind-pawar-website",
-    name: "Milind Pawar Website",
-    hero: true,
-    tagline:
-        "A modern, responsive business website developed as a freelance project, built for performance, clarity, and conversion.",
-    stack: ["React", "Tailwind CSS", "SEO"],
-    features: [
-      "Fully responsive layout across mobile, tablet, and desktop",
-      "Clean, distraction-free UI focused on business conversion",
-      "Optimized asset loading for fast page speed",
-      "On-page SEO — meta tags, semantic structure, and sitemap",
-      "Client-focused structure designed for easy content updates",
-    ],
-    challenges: [
-      "Balancing a content-heavy business site with fast load times",
-      "Designing a UI that remained simple and accessible for a non-technical client",
-      "Translating client requirements into a polished, professional web presence",
-    ],
-    architecture:
-        "Static React front end with component-based sections, optimized assets, and SEO-friendly structure, deployed behind a CDN for fast global delivery.",
-    github: "https://github.com/Karanbhosale18/milind-pawar-website",
   }
   ,{
     slug: "student-progress-tracker",
